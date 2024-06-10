@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+
 type Props = {
   title?: string;
   description?: string;
@@ -25,11 +27,19 @@ const {
   </head>
 
   <body
-    class="bg-gradient-to-b from-black to-theme-base text-theme-text text-base relative min-h-screen"
+    class="bg-gradient-to-b from-black to-theme-base text-theme-text text-base relative min-h-screen grid-rows-auto-1fr grid place-items-center"
   >
-    <main
-      class="container grid place-items-center place-content-center min-h-screen"
-    >
+    <header>
+      <div
+        class="py-8 text-theme-accent font-bold text-3xl grid place-items-center"
+        aria-label="Firebase and Astro"
+      >
+        <Icon name="firebase" width={300} height={70} />
+        <Icon name="plus" class="-mb-7 -mt-2 size-8 -z-10" />
+        <Icon name="astro" width={400} height={110} />
+      </div>
+    </header>
+    <main class="container grid place-items-center">
       <slot />
     </main>
   </body>

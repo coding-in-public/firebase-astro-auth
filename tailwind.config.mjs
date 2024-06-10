@@ -17,6 +17,9 @@ export default {
         center: true,
         padding: "1.4rem",
       },
+      gridTemplateRows: {
+        "auto-1fr": "auto 1fr",
+      },
       colors: {
         theme: {
           base: "#202020",
