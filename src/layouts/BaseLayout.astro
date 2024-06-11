@@ -10,6 +10,8 @@ const {
   title = "Firebase Auth",
   description = "Astro tutorial for Firebase Auth",
 } = Astro.props;
+
+const { userEmail } = Astro.locals;
 ---
 
 <!doctype html>
@@ -38,6 +40,7 @@ const {
         <Icon name="plus" class="-mb-7 -mt-2 size-8 -z-10" />
         <Icon name="astro" width={400} height={110} />
       </div>
+      {userEmail && <p>Welcome back, {userEmail}</p>}
     </header>
     <main class="container grid place-items-center">
       <slot />
